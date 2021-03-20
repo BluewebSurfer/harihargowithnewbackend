@@ -33,6 +33,7 @@ const contactschema=Mongoose.Schema({
         required:true
     },
     phone:String,
+    address:String,
     message:String
 })
 const volschema=Mongoose.Schema({
@@ -118,6 +119,7 @@ app.post("/contactus",async function(req,res){
     fullname:req.body.name,
     email:req.body.email,
     phone:req.body.phone,
+    address:req.body.address,
     message:req.body.message
 }
 const cpost=new contactmessage(contactpost);
